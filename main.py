@@ -146,3 +146,4 @@ while (1):
     Defeat them all, the castle's key,
     To face the final boss, one's destiny.""")
         break
+
