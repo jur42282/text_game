@@ -13,8 +13,8 @@ import sys
 #     result = fight(input("What do you do? (kick, hit, defend, random): "))
 
 #variables
-secret_boss= "D1dnt"
-monster_list = ["spider", "goblin", "troll", "zombie", "skeleton", "ghost", "witch", "nigga", "Zihan", "Kawai"]
+# WIP secret_boss= "D1dnt"
+monster_list = ["spider", "goblin", "troll", "zombie", "skeleton", "ghost", "witch"]
 player_hp = 10
 # x = chance of random encounter (default 1-3 chance)
 #
