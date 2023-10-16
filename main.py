@@ -16,7 +16,7 @@ import sys
 # WIP secret_boss= "D1dnt"
 monster_list = ["spider", "goblin", "troll", "zombie", "skeleton", "ghost", "witch"]
 player_hp = 10
-# x = chance of random encounter (default 1-3 chance)
+# x = chance of random encounter (1/x)
 #
 #
 #
@@ -196,7 +196,7 @@ t.sleep(5)
 while (1):
     bar_input = input("""What do you ask the bartender?
                       1. What is the Twilight Forest?
-                      2. What is the legend?
+                      2. What are the bosses?
                       3. What is the castle?
                       4. What is the final boss?
                       5. Say goodbye.
@@ -206,21 +206,31 @@ while (1):
               But it hasn't been that way.
               It's a peaceful place where many people lived.
               But one day, a mysterious castle appeared in the middle of the forest and .""")
+        t.sleep(5)
         continue
     if bar_input == "2":
-        print("""The legend is that if you defeat the three bosses and get the castle's key,
-              you can face the final boss and save the forest.""")
+        print("""The bosses are three mysterious creatures that appeared in the forest.
+              The first one is Naga. Snake like creature that lives near the water in it's labyrinth.
+              The second one is Hydra. A creature with many heads that lives under a hill in the forest.
+              The third one is a Linch. A skeleton like creature that can do magic. It lives in weird castle wtih levitating towers.""")
+        t.sleep(5)
         continue
     if bar_input == "3":
         print("""The castle is a mysterious castle that appeared in the middle of the forest.
               It is said that the final boss lives there.""")
+        t.sleep(5)
         continue
     if bar_input == "4":
         print("""The final boss is a mysterious creature that lives in the castle.
-              It is said that it is the one who cursed the forest.""")
+              It is said that it is the one who cursed the forest.
+              There are many rumors about it, but no one knows what it really is.""")
+        t.sleep(5)
         continue
     if bar_input == "5":
         print("You say goodbye to the bartender and leave the tavern.")
+        t.sleep(3)
     else:
         print("Invalid option. Please choose from '1', '2', '3', '4', or '5'.")
         continue
+
+    
