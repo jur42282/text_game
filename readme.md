@@ -1,10 +1,10 @@
 Adventure text game base on Twilight Forest mod for MC.
 
-V0.02 Working HP and Combat system; Starting menu - difficulty and nickname
-v0.03 Added some elemts to the story and lore
-v0.04 Added bartender NPC
+V0.0.2 Working HP and Combat system; Starting menu - difficulty and nickname
+v0.0.3 Added some elemts to the story and lore
+v0.0.4 Added bartender NPC
+v0.0.5 Fixed medium diff., Added Naga
 
 
-WIP: Quest, preps for  boss fights, boss fights
-
-last update: 13.10.2023
+WIP: Hydra, Linch, Main boss
+last update: 23.10.2023
