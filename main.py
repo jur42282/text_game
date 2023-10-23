@@ -1,5 +1,6 @@
 # Adventure text game
 # Made by Lukáš Jurák
+#Version 0.0.5
 
 # imports
 import random
@@ -63,9 +64,9 @@ while (1): #Game settings
 
     if difficulty == "easy":
         x = 6
-    if difficulty == "medium":
+    elif difficulty == "medium":
         x = 4
-    if difficulty == "hard":
+    elif difficulty == "hard":
         x = 2
     else:
         print("Invalid difficulty. Please choose from 'easy', 'medium', or 'hard'.")
@@ -229,8 +230,76 @@ while (1):
     if bar_input == "5":
         print("You say goodbye to the bartender and leave the tavern.")
         t.sleep(3)
+        break
     else:
         print("Invalid option. Please choose from '1', '2', '3', '4', or '5'.")
         continue
 
-    
+print("As you leave the tavern a map suddenly appears in your pocket.")
+t.sleep(2)
+print("You look at the map and see the locations of the bosses.")
+t.sleep(2)
+while (1):
+    print("Do you want to continue your journey?")
+    choice = input("y/n: ")
+    if choice == "n":
+        print("You throw the map away and forget about all of this....")
+        sys.exit()
+    elif choice == "y":
+        print("You decided to continue your journey.")
+        break
+    else:
+        print("Invalid option. Please choose from 'y' or 'n'.")
+        continue
+
+print("You went to the Naga.")
+t.sleep(2)
+print("You see a simple labyrinth and infront of the entrance is a sword and some armor.")
+t.sleep(2)
+print("You put on the armor ,take the sword and go into the labyrinth.")
+print("It is really simple and you find yourself in the center of it in no time.")
+t.sleep(2)
+print("Suddenly the ground starts shaking and you hear a loud roar.")
+print("You turn around and see giant snake like creature!")
+
+while (1):
+    naga_hp = 50 / x
+    print(naga_hp)    
+    while (1):
+        if player_hp <= 0:
+            print("You died!")
+            print("Do you want to try again?")
+            choice = input("y/n: ")
+            if choice == "y":
+                print("You decided to try again.")
+                break
+            elif choice == "n":
+                print("You decided to give up.")
+                sys.exit()
+            else:
+                print("Invalid option. Please choose from 'y' or 'n'.")
+                continue        
+        action = input("""What do you do?
+                       1. Swing your sword
+                       2. Defend 
+                       3. Dodge it's attack
+                       4. Give up
+                       """)
+        if action == "1":
+            print("You swing your sword at the Naga.")
+            random.randint(1, x)
+            if random.randint(1, x) == 1:
+                naga_hp = naga_hp - 3
+                print("You hit the Naga and dealt 3 damage!")
+                print(f"Naga's HP: {naga_hp}")
+                break
+            else:
+                print("The Naga dodges your attack!")
+                random.randint(1, x)
+                if random.randint == 1:
+                    print("The Naga attacks you!")
+                    player_hp = player_hp - 3
+                    print(f"You took 3 damage! Your HP: {player_hp}")
+                    break
+                continue
+        
