@@ -282,8 +282,7 @@ while (1):
         action = input("""What do you do?
                        1. Swing your sword
                        2. Defend 
-                       3. Dodge it's attack
-                       4. Give up
+                       3. Give up
                        """)
         if action == "1":
             print("You swing your sword at the Naga.")
@@ -302,4 +301,23 @@ while (1):
                     print(f"You took 3 damage! Your HP: {player_hp}")
                     break
                 continue
+        if action == "2":
+            print("You defend against the Naga's attack!")
+            random.randint(1, x)
+            if random.randint == 1:
+                print("The Naga attacks you!")
+                player_hp = player_hp - 3
+                print(f"You took 3 damage! Your HP: {player_hp}")
+                break
+            else:
+                print("You successfully defended against the Naga's attack!")
+                continue
+        if action == "3":
+            if input("Never back down never what? ") == "never give up" or "Never give up":
+                print("NEVER GIVE UP....")
+                continue
+            else:
+                print("You gave up!")
+                print("GAME OVER")
+                sys.exit()
         
