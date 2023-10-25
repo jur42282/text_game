@@ -1,20 +1,15 @@
 # Adventure text game
 # Made by Lukáš Jurák
-#Version 0.0.5
+#Version 1.0.0
 
 # imports
 import random
 import time as t
 import sys
 
-# print("vydal jsi se na cestu")
-# if random.randint(1, x) == 1:
-#     monster = random.choice(monster_list)
-#     print(f"you encountered a {monster}!")
-#     result = fight(input("What do you do? (kick, hit, defend, random): "))
+
 
 #variables
-# WIP secret_boss= "D1dnt"
 monster_list = ["spider", "goblin", "troll", "zombie", "skeleton", "ghost", "witch"]
 player_hp = 10
 # x = chance of random encounter (1/x)
@@ -22,9 +17,6 @@ player_hp = 10
 #
 #
 #
-#npcs
-# bar_yes = ["yes", "y", "yeah", "sure", "ok", "okay", "yep", "yup", "yea"]
-# bar_no = ["no", "n", "nope", "nah"]
 
 #random encounter fights
 def fight(player_move):
@@ -834,3 +826,4 @@ t.sleep(2)
 print("Eventually you've died and the whole Twilight forest has dissapeared with you....")
 t.sleep(5)
 print("THE END")
+
