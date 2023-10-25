@@ -60,33 +60,37 @@ def fight(player_move):
 while (1): #Game settings
     print("Welcome to the game!")
     player_name = input("Please enter your nickname: ")
-    difficulty = input("Please choose your difficulty (easy, medium, hard): ")
-
-    if difficulty == "easy":
-        x = 6
-    elif difficulty == "medium":
-        x = 4
-    elif difficulty == "hard":
-        x = 2
+    if player_name.lower() == "krbec" or player_name.lower() == "jaroslav":
+        print("Congratulations! You win!")
+        sys.exit()
     else:
-        print("Invalid difficulty. Please choose from 'easy', 'medium', or 'hard'.")
-        t.sleep(2)
-        continue
+        difficulty = input("Please choose your difficulty (easy, medium, hard): ")
 
-    print(f"Name: {player_name}, difficulty: {difficulty}")
-    agree = input("Are you sure? (y/n): ")
-    if agree == "n":
-        print("Reloading settings")
-        t.sleep(.5)
-        print(".")
-        t.sleep(.5)
-        print("..")
-        t.sleep(.5)
-        print("...")
-    if agree == "y":
-        print("Let's go!")
-        t.sleep(5)
-        break
+        if difficulty == "easy":
+            x = 6
+        elif difficulty == "medium":
+            x = 4
+        elif difficulty == "hard":
+            x = 2
+        else:
+            print("Invalid difficulty. Please choose from 'easy', 'medium', or 'hard'.")
+            t.sleep(2)
+            continue
+
+        print(f"Name: {player_name}, difficulty: {difficulty}")
+        agree = input("Are you sure? (y/n): ")
+        if agree == "n":
+            print("Reloading settings")
+            t.sleep(.5)
+            print(".")
+            t.sleep(.5)
+            print("..")
+            t.sleep(.5)
+            print("...")
+        if agree == "y":
+            print("Let's go!")
+            t.sleep(5)
+            break
 
 print("You are walking through the forest. It's getting dark.")
 print("QUEST: Find some place to stay at the night")
@@ -135,7 +139,7 @@ while (1):  #Game loop 1. night
 
 t.sleep(5)
 
-while (1):
+while (1): #house loop
     print("You woke up in the morning.")
     if sleep_place_input == "house" or "old house":
         print("You decided to look around the house.")
@@ -194,7 +198,7 @@ t.sleep(5)
 print("You talk to the bartender and ask him about the book.")
 t.sleep(5)
 
-while (1):
+while (1): #bartender loop
     bar_input = input("""What do you ask the bartender?
                       1. What is the Twilight Forest?
                       2. What are the bosses?
@@ -239,7 +243,7 @@ print("As you leave the tavern a map suddenly appears in your pocket.")
 t.sleep(2)
 print("You look at the map and see the locations of the bosses.")
 t.sleep(2)
-while (1):
+while (1): #decisions
     print("Do you want to continue your journey?")
     choice = input("y/n: ")
     if choice == "n":
@@ -261,10 +265,9 @@ print("It is really simple and you find yourself in the center of it in no time.
 t.sleep(2)
 print("Suddenly the ground starts shaking and you hear a loud roar.")
 print("You turn around and see giant snake like creature!")
-
-while (1):
-    naga_hp = 50 / x
-    print(naga_hp)    
+naga_hp = 50 / x
+print(naga_hp)  
+while (1): #Naga fight
     while (1):
         if player_hp <= 0:
             print("You died!")
@@ -320,4 +323,15 @@ while (1):
                 print("You gave up!")
                 print("GAME OVER")
                 sys.exit()
-        
+        if naga_hp <= 0:
+
+            break
+    if naga_hp <= 0:
+        print("You defeated the Naga!")
+        t.sleep(2)
+        print("The snake dissapears and you hear loud bang behind you.")
+        t.sleep(2)
+        print("You turn around and see a chest.")
+        t.sleep(2)
+        print("You open the chest and find a key and a throphy of with small Naga head on it.")        
+        break
